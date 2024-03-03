@@ -1,0 +1,434 @@
+@charset "UTF-8";
+/* GENERAL */
+
+
+* {
+  box-sizing: border-box;
+ 
+}
+
+
+.container .navbar{
+  background-color: #FFFFFF;
+  margin: auto;
+  
+}
+
+ .navbar a{
+    color: #ef849b;
+    padding: 5px;
+    margin: 20px;
+  }
+
+  .navbar a:hover{
+    color: #569391;
+    cursor: pointer;
+  }
+
+
+body {
+  margin: 0;
+}
+body h1 {
+  font-size: 3em;
+  background-color: #F1DEE2;
+  color: #569391;
+  text-align: center;
+  font-family: "open sans";
+  margin-top: 20px;
+}
+body h2 {
+  font-size: 2em;
+}
+body h3 {
+  font-size: 1.5em;
+}
+body p {
+  font-size: 1em;
+}
+body ul {
+  list-style: none;
+}
+
+
+/* INICIO DESKTOP Y TABLET */
+ 
+@media only screen and (min-width: 720px){
+ 
+  #elegirnos{
+    margin-top: 110px;
+  }
+ 
+  #elegirnos .container{
+    display: flex;
+    justify-content: center;
+
+  }
+  
+.texto h2{
+  text-align: center;
+}
+
+  #elegirnos .texto{
+    padding: 0px 30px;
+    width: 50%;
+    text-align: initial;
+    max-width: 600px;
+    flex-direction: column;
+    justify-content:center ;
+    margin: 80px;
+  }
+ 
+  #elegirnos img{
+    width: 400px;
+    margin: 30px;
+  }
+}
+
+
+  /* INICIO MOBIL */
+
+ @media screen and (max-width: 1024px){
+ 
+  #elegirnos .container{
+     text-align: center;
+     padding: 200px 12px;
+     
+ }
+ 
+ #elegirnos .container h2{
+     text-align: center;
+     color: #569391;
+     
+ }
+ 
+ #elegirnos .container p{
+     font-size: 20px;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+  
+  .presentacion{
+    display: none;
+  }
+}
+ 
+
+
+/* PRODUCTOS DESKTOP Y TABLET */
+
+ #gallery{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+
+.galeria-img{
+  display: flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+
+  .galeria-img .imagen{
+      width: 30%;
+      position: relative;
+      height: 250px;
+      margin-bottom: 7px;
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+    } 
+
+
+
+.imagen img{
+  width: 100%;
+  height: 100%;
+}
+ 
+
+ .overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: rgb(62, 202, 179);
+  background: rgba(176, 198, 212, 0.781) ;
+  width: 100%;
+  height: 0;
+  transition: 5s ease;
+  overflow: hidden;
+ }
+
+ .overlay h2{
+  color: #FFFFFF;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+ }
+
+ .imagen:hover .overlay{
+  height: 100%;
+  cursor: pointer;
+  }
+
+
+
+/* PRODUCTOS MOBIL Y TABLET */
+
+@media only screen and (max-width: 1024px){
+
+  .galeria-img{
+    width: 98%;
+  }
+  
+  .galeria-img .imagen{
+    width: 80%;
+  }
+
+  .imagen:hover .overlay{
+    cursor: pointer;
+  }
+}
+
+/* RECETAS DESKTOP Y TABLET*/ 
+
+
+.column-4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.tarjeta-receta{
+  background-repeat: no-repeat;
+  height: 400px;
+  border-radius: 6px;
+  padding: 1rem .5rem;
+  align-items: end;
+  display: flex;
+}
+
+.receta-texto {
+  color: #FFFFFF;
+  padding: .5rem;
+  border-radius: 6px;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)) 
+}
+
+.receta-texto h3{
+  font-size: 25px;
+  text-align: center;
+}
+
+.receta-texto p{
+  font: 15px;
+}
+.wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.preparaciones{
+  margin-top: 20px;
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  text-align: center;
+}
+
+.preparaciones .ñoquis {
+  margin: 40px;
+}
+.preparaciones .budin {
+  margin: 40px;
+}
+.preparaciones .guiso {
+  margin: 40px;
+}
+.preparaciones .peras {
+  margin: 40px;
+}
+
+.preparaciones h2{
+  background-color:#F1DEE2;
+  color: #569391;
+  margin: 20px;
+  padding: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+.preparaciones h3{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: underline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.preparaciones p{
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* RECETAS MOBIL */
+@media only screen and (max-width: 1024px){
+  .column-4{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* MI EQUIPO DESKTOP */
+
+  .btn {
+  bottom: unset;
+  background-color: #569391;
+  color: #F1DEE2;
+  }
+
+  #team {
+    justify-content: center;
+    display: flex;
+    margin: 100px;
+    padding: auto
+  }
+  .yo{
+    img{
+      width: 300px;
+     
+      border-radius: 20px;
+    }
+  }
+  
+  .texto{
+      color: #447d7b;
+    }
+
+    .texto p{
+     font-size: 18px;
+     text-align: center;
+     margin: 15px 10px 10px 15px;
+     }
+
+ 
+
+/* MI EQUIPO MOBIL*/
+
+@media only screen and (max-width:1024px) {
+  .texto{
+  color: #569391;
+  text-align: center;
+}
+
+.yo{
+  display: none
+}
+}
+
+
+
+/* CONTACTO DESKTOP Y TABLET */
+
+.redes-sociales{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #FFFFFF;
+  margin: 20px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  overflow: hidden;
+  box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+  transition: all .3s ease-out;
+}
+ 
+.icon:hover{
+  width: 400px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #FFFFFF;
+}
+
+
+.icon:hover i{
+  color: #FFFFFF;
+}
+
+.icon .fa-whatsapp{
+  color: green;
+}
+
+.wp:hover{
+  background: green;
+  }
+
+.icon .fa-instagram{
+    color: rgb(192, 29, 110);
+  }
+
+.insta:hover{
+  background:  rgb(192, 29, 110);
+}
+
+.icon .fa-tiktok{
+  color: black;
+}
+
+.tiktok:hover{
+  background: black;
+}
+
+ /* CONTACTO MOBIL */
+ 
+
+ @media only screen and (max-width:1024px) {
+  
+  .redes-sociales{
+    flex-direction: column;
+  }
+  
+}
+
+ /* FOOTER */
+
+
+ footer{
+  background-color: #F1DEE2;
+  text-align: center;
+ }
+
+ .footer{
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+ }
+
+ .footer a{
+  color: #ef849b;
+  margin: 40px;
+ }
+
+ .footer a:hover{
+  color: #569391;
+  cursor: pointer;
+ }
+/*# sourceMappingURL=styles.css.map */
